@@ -1,0 +1,103 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> LOGIN PAGE LIBRARIAN</title>  
+<script>
+    function myFunction()
+    {
+        var un = document.forms["myForm"]["username"].value;
+        var pw = document.forms["myForm"]["password"].value;
+        
+        if(un=="admin" && pw=="admin")
+        {
+
+            window.location.assign("dashboard.html");
+        }
+        else{
+          alert("Invalid username and password");  
+          
+        }
+    }
+</script>
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: black;  
+  size: 70%;
+}  
+button {   
+       background-color: #e52910;   
+       width:100%;  
+        color: white; 
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer; 
+        height:50%;
+        width:200px;  
+         }   
+ form {   
+        border: 3px solid #f1f1f1;  
+        box-sizing: border-box; 
+        size: 100px;
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%%; 
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        border: 2px solid rgb(207, 213, 207);   
+      
+    }  
+ button:hover { 
+    color: rgb(11, 10, 10);
+        opacity: 0.7;   
+    }   
+ 
+       
+        
+     
+ .container {   
+        padding: 15px;   
+        background-color:rgb(190, 68, 27);
+        box-sizing: border-box;
+        size: 100%;
+        cursor: pointer;
+        opacity: 0.8;
+    }   
+    #btn1{
+        color:black;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        border-color: none;
+        box-shadow: 0.5;
+        width: 1.5cm;
+        height: 0.7cm;
+    }
+    #btn1:hover{
+        opacity: 0.9;
+        color: red;
+        transition: 3px;
+    }
+    
+</style>   
+</head>    
+<body>    
+    <center><h1 style="width: 100%; height: 2cm; color: red; background-color: black; font-size: 300%;">LIBRARY MANAGEMENT SYSTEM</h1></center>
+    
+  
+     
+        <div class="container"> 
+            <form name="myForm" method="post" width="90%" height="70%"> 
+            <center><label style="color: #f1f1f1;">Username : </label></center>
+            <center><input type="text" placeholder="Enter Username" name="username" required></center>
+            <center><label style="color: #f1f1f1;">Password : </label></center>
+            <center> <input type="password" placeholder="Enter Password" name="password" required></center>
+            <center><input type = "button" name="logButton" value="Login" style="cursor: pointer;"id="btn1"onclick="myFunction()"></center>   
+           </form> 
+              
+        </div>  
+         
+       
+</body>     
+</html>  
